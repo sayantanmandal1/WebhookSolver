@@ -1,0 +1,29 @@
+challenge:
+  user:
+    name: John Doe
+    reg-no: REG12347
+    email: john.doe@example.com
+  api:
+    webhook-generator-url: https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA
+    submission-base-url: https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA
+
+spring:
+  application:
+    name: webhook-sql-challenge
+
+logging:
+  level:
+    # Application package - INFO level for workflow steps
+    com.challenge.webhook: INFO
+    # HTTP client - DEBUG level for detailed request/response data
+    org.springframework.web.client: DEBUG
+    # RestTemplate interceptor - DEBUG for HTTP details
+    com.challenge.webhook.config.RestTemplateConfig: DEBUG
+  pattern:
+    # Console pattern with colors and thread info
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{36}) - %msg%n"
+    # File pattern with full details
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    # Log file location
+    name: logs/webhook-sql-challenge.log
