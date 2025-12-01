@@ -1,8 +1,8 @@
 challenge:
   user:
-    name: John Doe
-    reg-no: REG12347
-    email: john.doe@example.com
+    name: Anushree Das
+    reg-no: 22BCE9076
+    email: anushree@gmail.com
   api:
     webhook-generator-url: https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA
     submission-base-url: https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA
