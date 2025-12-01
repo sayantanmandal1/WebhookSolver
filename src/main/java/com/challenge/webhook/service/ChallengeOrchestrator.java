@@ -56,6 +56,10 @@ public class ChallengeOrchestrator {
             UserDetails userDetails = createUserDetails();
             WebhookResponse webhookResponse = webhookService.generateWebhook(userDetails);
             logger.info("Step 1 completed: Webhook URL: {}", webhookResponse.getWebhook());
+            logger.debug("Access token received: {}...{} (length: {})", 
+                    webhookResponse.getAccessToken().substring(0, Math.min(10, webhookResponse.getAccessToken().length())),
+                    webhookResponse.getAccessToken().length() > 10 ? webhookResponse.getAccessToken().substring(webhookResponse.getAccessToken().length() - 10) : "",
+                    webhookResponse.getAccessToken().length());
 
             // Step 2: Determine which question to solve
             logger.info("Step 2: Determining question assignment...");

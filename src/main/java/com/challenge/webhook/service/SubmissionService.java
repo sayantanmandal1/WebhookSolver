@@ -46,6 +46,9 @@ public class SubmissionService {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
             headers.setBearerAuth(accessToken);
+            
+            logger.debug("Authorization header set with Bearer token (length: {})", accessToken.length());
+            logger.debug("Full headers: {}", headers);
 
             // Create HTTP entity with headers and body
             HttpEntity<SubmissionRequest> entity = new HttpEntity<>(request, headers);

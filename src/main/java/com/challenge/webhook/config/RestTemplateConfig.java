@@ -77,6 +77,7 @@ public class RestTemplateConfig {
         private void logRequest(HttpRequest request, byte[] body) {
             interceptorLogger.info("HTTP Request - Method: {}, URI: {}", 
                     request.getMethod(), request.getURI());
+            interceptorLogger.debug("Request Headers: {}", request.getHeaders());
             
             if (body.length > 0) {
                 interceptorLogger.debug("Request Body: {}", new String(body, StandardCharsets.UTF_8));
