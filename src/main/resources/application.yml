@@ -2,7 +2,7 @@ challenge:
   user:
     name: Anushree Das
     reg-no: 22BCE9076
-    email: anushree@gmail.com
+    email: anushreets13@gmail.com
   api:
     webhook-generator-url: https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA
     submission-base-url: https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA
